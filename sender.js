@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('loginForm');
+    const form = document.getElementById('form');
 
     form.addEventListener('submit', function (event) {
         event.preventDefault(); // Prevents the default form submission
