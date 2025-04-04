@@ -4,14 +4,6 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', function (event) {
         event.preventDefault(); // Prevents default form submission
 
-        const params = new URLSearchParams(window.location.search);
-        const email = params.get('email');
-
-        if (email) {
-        const emailInput = document.getElementById('usr-id');
-        if (emailInput) {
-            emailInput.value = email;
-        }
         const usrId = document.getElementById('usr-id').value.trim();
         const password = document.getElementById('pwd').value.trim();
 
